@@ -37,12 +37,24 @@ function startCountdown() {
 // ITERATION 3: Show Toast
 function showToast(message) {
   console.log("showToast called!");
-
   let card = document.querySelector("#toast");
-  card.classList.add("shown");
+  card.classList.add("show"); 
 
-  
+  const timeoutId = setTimeout(function () {
+    card.remove("show");
+  },3000);
 }
+
+/* ES5
+const timeoutId = setTimeout(function () {
+  console.log('Hey there, Ironhackers!');
+}, 1000);
+
+// ES6
+const timeoutId = setTimeout(() => {
+  console.log('Hey there, Ironhackers!');
+}, 1000);*/
+
 
 // BONUS: ITERATION 4: TOAST CLOSE BUTTON
 
